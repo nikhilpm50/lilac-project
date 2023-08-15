@@ -1,0 +1,66 @@
+.main {
+  display: flex;
+}
+.left-sec {
+  width: 50%;
+  margin-top: 50px;
+}
+.left-sec p {
+  font-size: 100px;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin-bottom: 35px;
+}
+
+.right-sec {
+  padding: 60px;
+  width: 40%;
+}
+
+h2{
+    font-size: 48px;
+    margin: 0;
+}
+
+.black {
+  position: relative;
+}
+
+.white p {
+  font-size: 100px;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin-bottom: 35px;
+  color: #fffc00;
+}
+
+.white {
+  position: absolute;
+  top: 149px;
+  left: 75px;
+}
+
+.right-sec form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.right-sec Button {
+  background: #008ee4;
+  color: white;
+  font-size: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.input-div Input{
+    height: 45px;
+}

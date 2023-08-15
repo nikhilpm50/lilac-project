@@ -1,0 +1,32 @@
+.logo{
+    width: 150px;
+    margin-left: 20px;
+}
+
+.navbar{
+    display: flex;
+    height: 100px;
+
+    justify-content: space-between;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-links p{
+    font-weight: 400;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-right: 25px;
+    color: #65737e;
+    cursor: pointer;
+}
+
+.notify-text{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 21px;
+}

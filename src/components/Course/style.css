@@ -1,0 +1,176 @@
+.course-creation {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .section h3{
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+
+  .stepper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .step {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .step.basic-info {
+    border: 2px solid #6ac259;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .step.additional-info {
+    border: 2px solid #ffa500;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .step.eligibility-syllabus {
+    border: 2px solid #800080;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .step.fee-scholarship {
+    border: 2px solid #007bff;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .step.active {
+    background-color: #4caf50; /* Active step color */
+    color: white;
+  }
+  
+  .step.completed.basic-info {
+    background-color: #6ac259; /* Green for completed */
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+  }
+  
+  .step.completed.additional-info {
+    background-color: #ffa500; /* Orange for completed */
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+  }
+  
+  .step.completed.eligibility-syllabus {
+    background-color: #800080; /* Purple for completed */
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+  }
+  
+  .step.completed.fee-scholarship {
+    background-color: #007bff; /* Blue for completed */
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section.visible {
+    display: block;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .form-label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 25px;
+    width: 47%;
+    margin-bottom: 15px;
+  }
+  
+  .form-input{
+    margin-top: 10px;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid lightgrey;
+    width: 100%;
+  }
+  .form-div{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .required-marker {
+    color: red; /* or any color that fits your design */
+    margin-right: 4px; /* Add spacing between label and asterisk */
+  }
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }

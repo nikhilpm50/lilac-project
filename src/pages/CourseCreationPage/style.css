@@ -1,0 +1,13 @@
+.root{
+        width: 100%;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    width: fit-content;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
