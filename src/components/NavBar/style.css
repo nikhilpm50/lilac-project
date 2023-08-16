@@ -24,9 +24,32 @@
     cursor: pointer;
 }
 
+.nav-links-mobile{
+    display: none;
+}
+
 .notify-text{
     margin-left: 10px;
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 21px;
+}
+
+@media(max-width: 576px){
+    .nav-links{
+        display: none;
+    }
+    .nav-links-mobile{
+        display: block;
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+        margin: 0;
+    }
+    .navbar{
+        align-items: center;
+        height: 60px;
+        padding: 0 26px;
+    }
 }

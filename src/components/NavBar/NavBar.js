@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/lilac-logo.png";
+import { css } from '@emotion/react';
 import "./style.css";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
@@ -11,6 +12,10 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MenuIcon from '@mui/icons-material/Menu';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import firebaseConfig from "../../FirebaseContext";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import NotificationTile from "../Notification/NotificationTile";
@@ -28,6 +33,14 @@ const style = {
   border: "none",
   p: 4,
 };
+
+const responsiveStyles = css`
+  @media (max-width: 576px) {
+    width: 75%; 
+    top: 50%;
+    left: 50%
+  }
+`;
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -78,7 +91,7 @@ function NavBar() {
           }}
         >
           <Fade in={open}>
-            <Box sx={style}>
+            <Box sx={[style, responsiveStyles]}>
               <p className="notify-text">Notifications</p>
               <NotificationTile {...notificationData} />
             </Box>
@@ -109,16 +122,38 @@ function NavBar() {
         </Dialog>
       </div>
       {location.pathname !== "/" && (
-        <div className="nav-links">
-          <Link to="/homepage" style={{ textDecoration: "none" }}>
-            <p>Posts</p>
-          </Link>
-          <Link to="/course" style={{ textDecoration: "none" }}>
-            <p>Course Creation</p>
-          </Link>
+        <div>
+          <div className="nav-links">
+            <Link to="/homepage" style={{ textDecoration: "none" }}>
+              <p>Posts</p>
+            </Link>
+            <Link to="/course" style={{ textDecoration: "none" }}>
+              <p>Course Creation</p>
+            </Link>
 
-          <p onClick={handleOpen}>Notifications</p>
-          <p onClick={handleModalOpen}>Log Out</p>
+            <p onClick={handleOpen}>Notifications</p>
+            <p onClick={handleModalOpen}>Log Out</p>
+          </div>
+          <div className="nav-links-mobile">
+            <PopupState variant="popover" popupId="demo-popup-menu">
+              {(popupState) => (
+                <React.Fragment>
+                  <MenuIcon variant="contained" {...bindTrigger(popupState)} />
+
+                  <Menu {...bindMenu(popupState)}>
+                  <Link to="/homepage" style={{ textDecoration: "none" }}>
+                    <MenuItem onClick={popupState.close}>Posts</MenuItem>
+                    </Link>
+                    <Link to="/course" style={{ textDecoration: "none" }}>
+                    <MenuItem onClick={popupState.close}>Course Creation</MenuItem>
+                    </Link>
+                    <MenuItem onClick={()=>{popupState.close(); handleOpen();}}>Notifications</MenuItem>
+                    <MenuItem onClick={()=>{popupState.close(); handleModalOpen();}}>Log Out</MenuItem>
+                  </Menu>
+                </React.Fragment>
+              )}
+            </PopupState>
+          </div>
         </div>
       )}
     </div>

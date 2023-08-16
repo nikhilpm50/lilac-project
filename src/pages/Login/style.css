@@ -4,6 +4,7 @@
 .left-sec {
   width: 50%;
   margin-top: 50px;
+  margin-left: 50px;
 }
 .left-sec p {
   font-size: 100px;
@@ -24,6 +25,7 @@ h2{
 
 .black {
   position: relative;
+  width: 564px;
 }
 
 .white p {
@@ -37,7 +39,8 @@ h2{
 .white {
   position: absolute;
   top: 149px;
-  left: 75px;
+  left: 58px;
+  width: 564px;
 }
 
 .right-sec form {
@@ -63,4 +66,13 @@ h2{
 
 .input-div Input{
     height: 45px;
+}
+
+@media(max-width: 576px){
+  .left-sec{
+    display: none;
+  }
+  .right-sec{
+    width: 100%;
+  }
 }
